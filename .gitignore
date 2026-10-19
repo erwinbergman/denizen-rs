@@ -1,0 +1,17 @@
+/target
+**/*.rs.bk
+*.pdb
+Cargo.lock.bak
+
+# staged native binaries
+java-shim/src/main/resources/natives/
+
+# gradle / java build outputs
+java-shim/.gradle/
+java-shim/build/
+java-shim/bin/
+java-shim/out/
+
+# os clutter
+.DS_Store
+Thumbs.db
