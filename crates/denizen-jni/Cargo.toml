@@ -1,0 +1,15 @@
+[package]
+name = "denizen-jni"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "JNI bridge exposing the native Denizen engine to a Bukkit Java shim"
+
+[lib]
+name = "denizen"
+crate-type = ["cdylib"]
+
+[dependencies]
+denizen-core = { path = "../denizen-core" }
+jni = "0.21"
