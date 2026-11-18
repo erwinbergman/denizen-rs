@@ -1,0 +1,34 @@
+name: Denizen
+authors: ['The DenizenScript Team (Rust rewrite)']
+version: 1.3.4-native
+main: com.denizenscript.denizen.Denizen
+softdepend: [Citizens, Vault]
+api-version: '1.21'
+
+commands:
+  denizen:
+    description: Lists Denizen commands and engine info.
+    usage: /denizen <version|stats|reload|scripts>
+    permission: denizen.basic
+  ex:
+    description: Executes a Denizen script command.
+    usage: /ex <Denizen script command> (arguments)
+    permission: denizen.ex
+  exs:
+    description: Executes a Denizen script command in a sustained queue.
+    usage: /exs <Denizen script command> (arguments)
+    permission: denizen.ex
+  denizenclickable:
+    description: Executes a Denizen clickable command.
+    usage: /denizenclickable
+    permission: denizen.clickable
+
+permissions:
+  denizen.*:
+    description: Gives access to Denizen commands
+    default: op
+    children:
+      denizen.basic: true
+      denizen.ex: true
+      denizen.debug: true
+      denizen.clickable: true
